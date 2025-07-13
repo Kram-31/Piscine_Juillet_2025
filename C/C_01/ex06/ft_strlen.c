@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/11 22:32:04 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/12 21:31:55 by kkaced           ###   ########.fr       */
+/*   Created: 2025/07/13 18:10:33 by kkaced            #+#    #+#             */
+/*   Updated: 2025/07/13 18:10:48 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-}
+	int	len;
 
-void	ft_print_numbers(void)
-{
-	char	digit_char;
-
-	digit_char = '0';
-	while (digit_char <= '9')
+	len = 0;
+	while (str[len] != '\0')
 	{
-		ft_putchar(digit_char);
-		digit_char ++;
+		len++;
 	}
+	return (len);
 }
-/*
-int	main(void)
-{
-	ft_print_numbers();
-	return (0);
-}
-*/

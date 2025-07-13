@@ -1,52 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/09 14:02:27 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/13 13:25:43 by kkaced           ###   ########.fr       */
+/*   Created: 2025/07/13 23:31:14 by kkaced            #+#    #+#             */
+/*   Updated: 2025/07/14 00:09:21 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <string.h>
 
-void	ft_write(char c)
+char	*ft_strcpy(char *dest, char *src)
 {
-	write (1, &c, 1);
-}
+	int	i;
 
-void	ft_print_comb(void)
-{
-	char	d1;
-	char	d2;
-	char	d3;
-
-	d1 = '0';
-	while (d1 <= '7')
+	i = 0;
+	while (src[i] != '\0')
 	{
-		d2 = d1 + 1;
-		while (d2 <= '8')
-		{
-			d3 = d2 +1;
-			while (d3 <= '9')
-			{
-				ft_write (d1);
-				ft_write (d2);
-				ft_write (d3);
-				if (!(d1 == '7'))
-					write (1, ", ", 2);
-				d3++;
-			}
-			d2++;
-		}
-		d1++;
+		dest[i] = src[i];
+		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
 /*
-int	main(void)
+#include <stdio.h>
+
+int main(void)
 {
-	ft_print_comb();
-	return (0);
+	char	mot1;
+	char	mot2;
+
+	mot1 = 'K';
+	mot2 = 'd';
+
+	printf("mon prénom est : %s.\n Mon nom est : %s. \n" , &mot1, &mot2);
+	ft_strcpy(&mot1, &mot2);
+	printf("mon prénom est : %s.\n Mon nom est : %s" , &mot1, &mot2);
 }
 */

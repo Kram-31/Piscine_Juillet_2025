@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 20:03:25 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/12 22:25:41 by kkaced           ###   ########.fr       */
+/*   Created: 2025/07/12 19:50:06 by kkaced            #+#    #+#             */
+/*   Updated: 2025/07/12 20:09:59 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_swap(int *a, int *b)
 {
-	write(1, &c, 1);
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
-void	ft_is_negative(int n)
-{
-	if (n >= 0)
-	{
-		ft_putchar ('P');
-	}
-	else
-	{
-		ft_putchar ('N');
-	}
-}
 /*
-int	main(void)
+int main(void)
 {
-	ft_is_negative(42);
-	return (0);
+    int num1;
+    int num2;
+
+    num1 = 5;
+    num2 = 10;
+
+    printf("Avant l'appel à ft_swap: num1 = %d, num2 = %d\n", num1, num2);
+
+    ft_swap(&num1, &num2);
+
+    printf("Après l'appel à ft_swap: num1 = %d, num2 = %d\n", num1, num2);
+
+    return (0);
 }
 */

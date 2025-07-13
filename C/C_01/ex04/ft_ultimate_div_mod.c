@@ -1,51 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/11 19:27:42 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/13 13:27:54 by kkaced           ###   ########.fr       */
+/*   Created: 2025/07/12 19:53:35 by kkaced            #+#    #+#             */
+/*   Updated: 2025/07/12 19:55:36 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_ultimate_div_mod(int	*a, int	*b)
 {
-	write(1, &c, 1);
+	int	temp;
+
+	temp = *a;
+	*a = *a / *b;
+	*b = temp % *a;
 }
 
-void	ft_print_comb2(void)
-{
-	int	d1;
-	int	d2;
-
-	d1 = 0;
-	while (d1 <= 98)
-	{
-		d2 = d1 + 1;
-		while (d2 <= 99)
-		{
-			ft_putchar((d1 / 10) + '0');
-			ft_putchar((d1 % 10) + '0');
-			ft_putchar(' ');
-			ft_putchar((d2 / 10) + '0');
-			ft_putchar((d2 % 10) + '0');
-			if ((d1 != 98))
-			{
-				ft_putchar(',');
-				ft_putchar(' ');
-			}
-			d2++;
-		}
-		d1++;
-	}
-}
 /*
-int	main(void)
+#include <stdio.h>
+
+int main(void)
 {
-	ft_print_comb2();
+	int num1 = 17;
+	int num2 = 5; 
+
+	printf("Avant l'appel: a = %d, b = %d\n", num1, num2);
+
+	ft_ultimate_div_mod(&num1, &num2);
+      	printf("Après l'appel: a = %d, b = %d\n", num1, num2);
 	return (0);
 }
 */
