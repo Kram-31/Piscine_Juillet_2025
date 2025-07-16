@@ -18,7 +18,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	return dest;
 
 }
-/*
+
 #include <stdio.h>
 
 int main(void)
@@ -29,7 +29,8 @@ int main(void)
 
     printf("Le contenu du *src à été copié dans *dest: \n");
     printf("src: \"%s\", la nombre de char copié est: %u\n", src1, n1);
+	printf("dest avant: \"%s\"\n", dest1);
     ft_strncpy(dest1, src1, n1);
-    printf("dest: \"%s\"\n", dest1);
+    printf("dest apres: \"%s\"\n", dest1);
 }
-*/
+
