@@ -16,18 +16,15 @@ int	ft_strcmp(char *str1, char *str2)
 	unsigned int	tmp;
 
 	i = 0;
-	while (str1[i] && str2[i])
+	tmp = 0;
+	while ((str1[i] || str2[i]) && tmp == 0)
 	{
+		tmp = str1[i] - str2[i];
 		i++;
-		if (str2[i] == str1[i])
-			return 0;
-		if (str1[i] == '\0') 
-			return 0;
 	}
-	tmp = str1[i] - str2[i];
 	return (tmp);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int main(void)	
@@ -41,3 +38,4 @@ int main(void)
 
 	return (0);
 }
+*/
