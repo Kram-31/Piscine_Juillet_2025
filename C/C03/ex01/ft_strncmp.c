@@ -1,47 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/11 21:10:43 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/12 17:49:52 by kkaced           ###   ########.fr       */
+/*   Created: 2025/07/15 18:24:46 by kkaced            #+#    #+#             */
+/*   Updated: 2025/07/16 20:01:12 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strncmp(char *str1, char *str2, unsigned int n)
 {
-	write (1, &c, 1);
-}
+	unsigned int	i;
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	i = 0;
+	while (str1[i] == str2[i] && str1[i] != '\0' && i < n)
 	{
-		write(1, "-2147483648", 11);
-		return ;
+		i++;
 	}
-	if (nb < 0)
-	{
-		ft_putchar ('-');
-		nb *= -1;
-	}
-	if (nb > 9)
-	{
-		ft_putnbr (nb / 10);
-		ft_putnbr (nb % 10);
-	}
-	else
-	{
-		ft_putchar (nb + '0');
-	}
+	return ((str1[i] - str2[i]));
 }
 /*
+#include <stdio.h>
+#include <string.h>
 int main(void)
+
 {
-	ft_putnbr(42);
+	printf("\n%d", strncmp("hell", "hell", 4));
+	printf("\n%d", ft_strncmp("hell0dd", "hell01", 6));
+	return (0);
 }
 */
