@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ykolacze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 19:03:11 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/19 00:28:10 by kkaced           ###   ########.fr       */
+/*   Created: 2025/07/14 10:42:13 by ykolacze          #+#    #+#             */
+/*   Updated: 2025/07/14 10:49:54 by ykolacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	ft_strlen(char *str)
 {
-	int	facteur;
+	int	i;
 
-	facteur = 1;
-	if (nb <= 0)
-		return (0);
-	while (nb < 0)
-	{
-		facteur = facteur * nb;
-		nb--;
-	}
-	return (facteur);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

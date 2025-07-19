@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: parenvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 01:40:45 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/19 02:37:45 by kkaced           ###   ########.fr       */
+/*   Created: 2025/07/19 00:23:39 by parenvoi          #+#    #+#             */
+/*   Updated: 2025/07/19 00:31:10 by parenvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-int	ft_strlen(char *str)
+char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
+	int	j;
 
+	j = 0;
 	i = 0;
+	if (!to_find || *to_find == '\0')
+		return (str);
 	while (str[i] != '\0')
 	{
+		while (to_find[j] && str[i + j] == to_find[j])
+			j++;
+		if (to_find[j] == '\0')
+			return (str + i);
+		j = 0;
 		i++;
 	}
-	return (i);
-}
-
-int	main(int argc, char **argv)
-{
-	int		i;
-	char	n;
-
-	i = 1;
-	n = '\n';
-	while (i < argc)
-	{
-		write(1, argv[i], ft_strlen(argv[i]));
-		write(1, &n, 1);
-		i++;
-	}
-	return (0);
+	return (NULL);
 }

@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ykolacze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 19:03:11 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/19 00:28:10 by kkaced           ###   ########.fr       */
+/*   Created: 2025/07/14 10:51:22 by ykolacze          #+#    #+#             */
+/*   Updated: 2025/07/16 19:15:10 by ykolacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
-{
-	int	facteur;
+#include <unistd.h>
 
-	facteur = 1;
-	if (nb <= 0)
-		return (0);
-	while (nb < 0)
-	{
-		facteur = facteur * nb;
-		nb--;
-	}
-	return (facteur);
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		write(1, &str[i++], 1);
 }
