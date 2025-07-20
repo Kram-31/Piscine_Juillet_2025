@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aule-gue <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 13:13:40 by aule-gue          #+#    #+#             */
-/*   Updated: 2025/07/12 13:15:05 by aule-gue         ###   ########.fr       */
+/*   Created: 2025/07/20 22:57:45 by kkaced            #+#    #+#             */
+/*   Updated: 2025/07/20 23:44:40 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_putchar(char c);
-void	rush04(int x, int y);
-
-int	main(void)
+int	ft_find_next_is_prime(int nb)
 {
-	int	x;
-	int	y;
+	int	i;
 
-	x = 10;
-	y = 10;
-	rush04(x, y);
+	i = 2;
+	if (nb <= 0)
+		return (0);
+	while (i < nb)
+	{
+		if (nb % i == 0)
+		{
+			nb++;
+		}
+		i++;
+	}
+	return (1);
 }
+
+/*
+
+int main(void)
+{
+        ft_find_next_is_prime(7);
+
+}
+*/

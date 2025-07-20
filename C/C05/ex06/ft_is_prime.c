@@ -1,17 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aule-gue <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 13:21:45 by aule-gue          #+#    #+#             */
-/*   Updated: 2025/07/12 13:21:46 by aule-gue         ###   ########.fr       */
+/*   Created: 2025/07/20 21:34:20 by kkaced            #+#    #+#             */
+/*   Updated: 2025/07/20 23:45:12 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putchar(char c)
+int	ft_is_prime(int nb)
 {
-	write(1, &c, 1);
+	int	i;
+
+	i = 2;
+	if (nb <= 0)
+		return (0);
+	while (i < nb)
+	{
+		if (nb % i == 0)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }
+
+/*
+int main(void)
+{
+	ft_is_prime(6);
+		
+}
+*/
