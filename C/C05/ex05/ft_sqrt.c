@@ -14,6 +14,9 @@ int	ft_sqrt(int nb)
 	int	i;
 
 	i = 0;
+	if (nb == 1)
+		return (1);
+
 	while (i < (nb / 2))
 	{
 		if ((i * i) == nb)
@@ -27,6 +30,6 @@ int	ft_sqrt(int nb)
 
 int	main(void)
 {
-	printf("la racine carré de 4 est :%i\n", ft_sqrt(8));
+	printf("la racine carré de 4 est :%i\n", ft_sqrt(1));
 }
 */

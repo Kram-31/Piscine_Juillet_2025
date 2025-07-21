@@ -45,7 +45,7 @@ char	*ft_strdup(char *src) //LITTERALMENT la FT_STRCPY mais AVEC malloc NE pas O
 	free(dest);
 
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -58,3 +58,4 @@ int main(void)
 	dest = ft_strdup(src1);
     	printf("dest apres: \"%s\"\n", dest);
 }
+*/

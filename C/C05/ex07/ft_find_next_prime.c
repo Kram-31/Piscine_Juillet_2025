@@ -9,13 +9,15 @@
 /*   Updated: 2025/07/20 23:44:40 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_find_next_is_prime(int nb)
+int	ft_find_next_prime(int nb)
 {
 	int	i;
 
 	i = 2;
 	if (nb <= 0)
-		return (0);
+		return (2);
+	if (nb <= 1)
+		return(2);
 	while (i < nb)
 	{
 		if (nb % i == 0)
@@ -24,14 +26,13 @@ int	ft_find_next_is_prime(int nb)
 		}
 		i++;
 	}
-	return (1);
+	return (nb);
 }
-
 /*
 
 int main(void)
 {
-        ft_find_next_is_prime(7);
+        ft_find_next_prime(0);
 
 }
 */

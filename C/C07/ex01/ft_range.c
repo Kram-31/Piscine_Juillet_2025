@@ -11,33 +11,57 @@
 /* ************************************************************************** */
 #include <stdlib.h>
 #include <unistd.h>
-#include <stdio.h>
-int     *ft_range(int min, int max)
-{
-        int i;
-       // int *dest = NULL;
-        i = (max - min) + 1;
-       // dest = (int *) malloc (i *sizeof(int));
-       // if (max < min)
-        //        return (0);
-       // if (dest == NULL)
-         //       return  NULL;
-        while (i <= max)
-        {
-		printf("%i\n", i);
-		i++;
-        }
 
-       return 0;
-       // free(dest);
+int	*ft_range(int min, int max)
+{
+	int	i;
+	int	*d;
+
+	if (min >= max)
+		return (NULL);
+	max = max - min;
+	d = malloc (max * sizeof(int));
+	if (!d)
+		return (NULL);
+	i = 0;
+	while (i < max)
+	{
+		d[i] = min + i;
+		i++;
+	}
+	return (d);
+	free(d);
 }
 
+//ON A UN COMPTEUR I ET UN POINTEUR D'INT D DONC LE PREMIERS == CAS ERREUR,
+// MAX = MAX - MIN POUR AVOIR LA LONGEUR D'INT ENTRE LES DEUX 
+//IF (!d) ==  CAS ERREUR MALLOC
+// ON ALLOUE MAX * LA L INT A D 
+// ON BOUCLE TANT QUE FOIS JUSQUA I < MAX 
+// ON AJOUTE CHAQUE INT DANS LE TABLEAU + I POUR CHANGER D'INDEX 
+/*
 #include <stdio.h>
 
 int main(void)
 {
-       // int     *dest = malloc (sizeof(char));
-       // dest = ft_range(10, 20);
-	// printf("dest apres: \"%ls\"\n", dest);
-	ft_range(10,200);
+ 	int *d;
+    int i;
+    int min = 10;
+    int max = 60;
+	i = 0;
+    d = ft_range(min, max);
+    if (!d)
+	{	
+        return 1;
+	}
+	while(i < (max - min))
+    {
+	printf("%d ", d[i]);
+	i++;
+    }
+    printf("\n");
+
+    free(d);
+    return 0;
 }
+*/
