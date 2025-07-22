@@ -34,16 +34,14 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	return (j);
 }
-/*
 #include <stdio.h>
 int main()
 
 {
-	char dest[100] = "c'est qui ";
-	char src[] = "c'est moi et non c'est pas moi ";
-	ft_strlcpy(dest, src, 31 );
+	char dest[10] = "";
+	char src[] = "hello, world";
+	ft_strlcpy(dest, src, 1);
 	printf("%s\n", src);
 	printf("%s\n", dest);
 	return (0);
 }
-*/

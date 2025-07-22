@@ -43,7 +43,7 @@ char	*ft_strstr(char *str, char *to_find)
 			j = 0;
 		i++;
 	}
-	return (NULL);
+	return (j);
 }
 /*
 
