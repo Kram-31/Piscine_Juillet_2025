@@ -6,7 +6,7 @@
 /*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 18:59:05 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/20 23:47:25 by kkaced           ###   ########.fr       */
+/*   Updated: 2025/07/21 23:19:04 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_sqrt(int nb)
@@ -16,7 +16,6 @@ int	ft_sqrt(int nb)
 	i = 0;
 	if (nb == 1)
 		return (1);
-
 	while (i < (nb / 2))
 	{
 		if ((i * i) == nb)
@@ -30,6 +29,7 @@ int	ft_sqrt(int nb)
 
 int	main(void)
 {
-	printf("la racine carré de 4 est :%i\n", ft_sqrt(1));
+	printf("la racine carré de 4 est :%i\n", ft_sqrt(2));
 }
+
 */

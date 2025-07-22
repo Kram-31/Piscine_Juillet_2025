@@ -6,33 +6,37 @@
 /*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 22:57:45 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/20 23:44:40 by kkaced           ###   ########.fr       */
+/*   Updated: 2025/07/22 02:43:33 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+
 int	ft_find_next_prime(int nb)
 {
 	int	i;
 
 	i = 2;
-	if (nb <= 0)
-		return (2);
 	if (nb <= 1)
-		return(2);
-	while (i < nb)
+		return (2);
+	while (i < (nb / 2))
 	{
 		if (nb % i == 0)
 		{
 			nb++;
+			i = 1;
 		}
 		i++;
 	}
 	return (nb);
 }
 /*
+#include <stdio.h>
 
-int main(void)
+int main (void)
 {
-        ft_find_next_prime(0);
-
+	int nb;
+	nb = 12;
+	printf("lenbrpremiers a partir de %d est %d", nb,  ft_find_next_prime(nb));
+	
 }
 */

@@ -6,7 +6,7 @@
 /*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 05:34:56 by kkaced            #+#    #+#             */
-/*   Updated: 2025/07/21 01:46:13 by kkaced           ###   ########.fr       */
+/*   Updated: 2025/07/21 14:59:54 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -44,24 +44,25 @@ int	*ft_range(int min, int max)
 
 int main(void)
 {
- 	int *d;
-    int i;
-    int min = 10;
-    int max = 60;
+	int *d;
+    	int i;
+    	int min = 10;
+    	int max = 60;
+	
 	i = 0;
-    d = ft_range(min, max);
-    if (!d)
+    	d = ft_range(min, max);
+    	if (!d)
 	{	
-        return 1;
+        	return 1;
 	}
 	while(i < (max - min))
-    {
-	printf("%d ", d[i]);
-	i++;
-    }
-    printf("\n");
+	{
+		printf("%d ", d[i]);
+		i++;
+	}
+   	 printf("\n");
 
-    free(d);
+	free(d);
     return 0;
 }
 */

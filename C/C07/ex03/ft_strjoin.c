@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: parenvoi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kkaced <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/11 10:04:14 by parenvoi          #+#    #+#             */
-/*   Updated: 2025/07/11 12:18:43 by parenvoi         ###   ########.fr       */
+/*   Created: 2025/07/22 04:17:09 by kkaced            #+#    #+#             */
+/*   Updated: 2025/07/22 04:33:51 by kkaced           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	int	i;
-
+	
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
-		i++;
-	return (s1[i] - s2[i]);
-}
+	while(strs[i])
+	{
+		while 
