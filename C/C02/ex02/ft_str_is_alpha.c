@@ -11,34 +11,30 @@
 /* ************************************************************************** */
 #include <unistd.h>
 
-int 	ft_str_is_alpha(char *str)
+int	ft_str_is_alpha(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while ( str[i] != '\0')
-	{	
-		while ((str[i] < 'A') || (str[i] > 'Z' && str[i] < 'a')  || (str[i] > 'z'))
+	while (str[i] != '\0')
+	{
+		while ((str[i] >= 'A') || (str[i] <= 'Z' && str[i] >= 'a')
+			|| (str[i] <= 'z'))
 		{
-		return (0);
-		i++;
+			return (0);
+			i++;
 		}
-return (1);
+		return (1);
+	}
+	return (0);
 }
-
-
+/*
 #include <stdio.h>
 
 int		main(void)
 {
 	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *p_alp;
-	p_alp = alpha;
 	ft_str_is_alpha(alpha);
-
-	char special[] = "ABC abc áéíóú àèìòù âêîôû äëïöü \'\"(){}[]!?@#$&* wxyz WXYZ";
-	char *p_spe;
-	p_spe = special;
-	ft_str_is_alpha(p_spe);
 	return (0);
 }
+*

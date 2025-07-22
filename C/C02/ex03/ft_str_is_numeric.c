@@ -19,7 +19,6 @@ int	ft_str_is_numeric(char *str)
 	{	
 		if  (str[i] < 48 ) || (str[i] > 57)
 		{
-			write(1, '1', 1);
 			return (1);
 		}
 		else 
@@ -28,7 +27,7 @@ int	ft_str_is_numeric(char *str)
 		}
 	}
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -38,3 +37,4 @@ int main(void)
 	*test = str;
 	ft_str_is_numeric(str[]);
 }
+*/
