@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	*ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -34,7 +34,7 @@ unsigned int	*ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	return (j);
 }
-#include <string.h>
+/*
 #include <stdio.h>
 int main()
 
@@ -46,3 +46,4 @@ int main()
 	printf("%s\n", dest);
 	return (0);
 }
+*/
