@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
-#include <unistd.h>
 
 int	*ft_range(int min, int max)
 {

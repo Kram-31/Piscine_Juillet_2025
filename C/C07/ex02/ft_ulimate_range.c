@@ -11,25 +11,23 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <unistd.h>
 
 int     ft_utimate_range(int **range, int min, int max)
 {
         int     i;
-        int     *d;
 
         if (min >= max)
-                return (NULL);
+		*range = NULL;
+                return (0);
         
-        d = malloc (max * sizeof(int));
-        if (!d)
-                return (NULL);
+        *range = malloc (max * sizeof(int));
+        if (!*range)
+                return (-1);
         i = 0;
         while (i < max)
         {
-                d[i] = min + i;
+                range[i] = min + i;
                 i++;
         }
-        return (d);
-        free(d);
+        return (range);
 }
