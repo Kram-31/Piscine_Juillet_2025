@@ -24,21 +24,30 @@ int	ft_strlen(char *str)
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	j;
+	unsigned int	dest_len;
+	unsigned int	src_len;
+	unsigned int i;
+	
 
-	i = 0;
-	j = 0;
-	while (dest[j])
-		j++;
-	while (src[i] && i < size - j - 1)
+	dest_len = 0;
+	src_len = ft_strlen(src);
+
+	while (dest[dest_len] < size && dest[dest_len])
+		dest_len++;
+// cas erreur exo 
+	if (dest_len >= size)
+		return (size + src_len);
+//return la len qu'on a essaye de crée
+	i = 0; // on a size - dest_len - 1 place pour src
+	while (src[i] && i < size - dest_len - 1)
 	{
-		dest[j + i] = src[i];
+		dest[dest_len + i] = src[i];
 		i++;
 	}
-	dest[j + i] = '\0';
-	return (j + ft_strlen(src));
-}
+// bit nul a la fin
+	dest[dest_len + i] = '\0';
+	return (dest_len + src_len);
+} // return la taille qu'on voulais crée
 /*
 #include <string.h>
 #include <stdio.h>

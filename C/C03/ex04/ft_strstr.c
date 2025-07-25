@@ -30,6 +30,8 @@ char	*ft_strstr(char *str, char *to_find)
 
 	i = 0;
 	j = 0;
+	if (to_find == '\0')
+		return (str);
 	size = ft_strlen(to_find);
 	while (str[i] != '\0')
 	{
@@ -40,6 +42,8 @@ char	*ft_strstr(char *str, char *to_find)
 				return (&str[i - j + 1]);
 		}
 		else
+			if (j > 0)
+			i = i - j;
 			j = 0;
 		i++;
 	}
